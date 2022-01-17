@@ -12,20 +12,15 @@ import unittest
 
 
 def anagrams(str1, str2):
-
-    if create_map(get_alpha_chars(str1)) == create_map(get_alpha_chars(str2)):
-        return True
-    else:
-        return False
+    return create_map(get_alpha_chars(str1)) == create_map(get_alpha_chars(str2))
 
 
 def get_alpha_chars(string):
     alphas = ""
     for i in string:
-
         if i.isalpha():
             alphas += i
-    return alphas
+    return alphas.lower()
 
 
 def create_map(a_str):
