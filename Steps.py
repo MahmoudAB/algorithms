@@ -23,8 +23,7 @@ def steps(num, count=1):
         print('#' * count)
         return
     print(("#" * count) + " " * (num - count))
-    count += 1
-    steps(num, count)
+    steps(num, count + 1)
 
 
 steps(2)
